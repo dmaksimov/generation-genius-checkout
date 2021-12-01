@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Checkout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link href="/assets/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="checkout-page">
+            <h1 class="checkout-page__heading">Checkout</h1>
+
+            <form action="">
+                <div class="checkout-page__sections">
+                    <div class="checkout-page__section">
+                        <h2 class="checkout-section__heading">Create Login</h2>
+                        <p class="checkout-section__description">Teachers & students share one login</p>
+
+                        <div class="form-group">
+                            <input type="text" placeholder="Username">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" placeholder="Enter your password">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" maxlength="4" placeholder="Create a 4-digit PIN">
+                            <p>PIN is for access to the manage account page.</p>
+                        </div>
+                    </div>
+                    <div class="checkout-page__section">
+                        <h2 class="checkout-section__heading">Customer Information</h2>
+                        <p class="checkout-section__description">For the person/organization paying</p>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" placeholder="Your Name">
+                            </div>
+
+                            <div class="form-group">
+                                <select id="">
+                                    <option>Teacher</option>
+                                    <option>Librarian</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" placeholder="School Name">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" placeholder="Billing Address">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" placeholder="City">
+                            </div>
+                            <div class="form-group">
+                                <select>
+                                    <option value="" disabled selected>State</option>
+                                    <option>Alabama</option>
+                                    <option>Alaska</option>
+                                    <option>Arizona</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="ZIP">
+                            </div>
+                        </div>
+
+                        <p class="mt-0"><a href="#">Click here for international address.</a></p>
+                    </div>
+                    <div class="checkout-page__section">
+                        <h2 class="checkout-section__heading">Secure Payment</h2>
+                        <p class="checkout-section__description">Choose payment method below</p>
+
+                        <div class="form-group">
+                            <div class="radio">
+                                <input id="payment-method-card" type="radio" name="payment_method" value="card" checked>
+                                <label for="payment-method-card">
+                                    Credit/Debit Card
+                                </label>
+                            </div>
+
+                            <div class="radio">
+                                <input id="payment-method-po" type="radio" name="payment_method" value="po">
+                                <label for="payment-method-po">Purchase Order</label>
+                            </div>
+                        </div>
+
+                        <div class="js-card-fields">
+                            <div class="form-group">
+                                <input type="text" placeholder="Card Number">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" placeholder="MM">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="YY">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="CVC">
+                                </div>
+                            </div>
+
+                            <div class="d-none d-lg-block">
+                                <button class="checkout-page__submit-btn checkout-page__submit-btn--card">
+                                    <span class="text">
+                                        <i class="fas fa-lock lock-icon"></i>
+                                        <span>Pay Now</span>
+                                    </span>
+                                    <i class="fal fa-arrow-right arrow-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="js-po-fields hide-initially">
+                            <div class="form-group">
+                                <input type="text" placeholder="Your Phone Number">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" placeholder="Billing Person Name">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" placeholder="Billing Person Email">
+                            </div>
+
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="po-accept-terms">
+                                    <label for="po-accept-terms">By checking this box, I agree to pay $795 and will submit a PO within 10 business days.</label>
+                                </div>
+                            </div>
+
+                            <div class="d-none d-lg-block">
+                                <button class="checkout-page__submit-btn checkout-page__submit-btn--po">
+                                    <i class="fas fa-lock lock-icon"></i>
+                                    <span>Activate &amp; Send Invoice</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checkout-page__section">
+                        <div class="checkout-promo">
+                            <i class="checkout-promo-icon fas fa-bell"></i>
+                            <div>
+                                <div class="checkout-promo__heading">January Promotion Applied</div>
+                                <div class="checkout-promo__description">9 Months Free Will Be Auto-Added To Plan</div>
+                            </div>
+                        </div>
+
+                        <div class="order-summary order-summary__card">
+                            <h2 class="order-summary__heading">Order Summary</h2>
+
+                            <div class="order-summary__plan">School Yearly Plan</div>
+
+                            <div class="order-summary__description js-card-fields">
+                                <p>This is a yearly recurring subscription paid once a year at $795. Cancel any time with 1 click on the manage account page. We send email reminders 30 days before each renewal.</p>
+                            </div>
+
+                            <div class="order-summary__description js-po-fields hide-initially">
+                                <p>
+                                    <span class="bold orange">Instructions:</span>
+                                    <br>
+                                    Please submit a PO within 10 days to keep your account active. After activating you will be emailed an invoice. Submit your PO via:
+                                    <br>
+                                    Fax:
+                                    <br>
+                                    <span class="bold black">(707) 312-8176</span>
+                                    <br>
+                                    Email:
+                                    <br>
+                                    <span class="bold black">order@generationgenius.com</span>
+                                </p>
+                            </div>
+
+                            <div class="form-group">
+                                <select name="">
+                                    <option>1 Year @ $795 per year</option>
+                                </select>
+                            </div>
+
+                            <div class="order-summary__total">
+                                <div>Total</div>
+                                <div class="bold black">$795</div>
+                            </div>
+                        </div>
+
+                        <div class="d-block d-lg-none">
+                            <button class="checkout-page__submit-btn checkout-page__submit-btn--po js-po-fields">
+                                <i class="fas fa-lock lock-icon"></i>
+                                <span>Activate &amp; Send Invoice</span>
+                            </button>
+                        </div>
+
+                        <div class="d-block d-lg-none">
+                            <button class="checkout-page__submit-btn checkout-page__submit-btn--card js-card-fields">
+                                <span class="text">
+                                    <i class="fas fa-lock lock-icon"></i>
+                                    <span>Pay Now</span>
+                                </span>
+                                <i class="fal fa-arrow-right arrow-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6156db8e92.js" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+          togglePaymentMethodFields()
+
+          $('input[name="payment_method"]').change(function() {
+            togglePaymentMethodFields()
+          })
+        })
+
+        function togglePaymentMethodFields() {
+          let fadeDuration = 150
+
+          if ($('input[name="payment_method"]:checked').val() === 'card') {
+            $('.js-po-fields').fadeOut(fadeDuration, function() {
+              $('.js-card-fields').fadeIn(fadeDuration)
+            })
+          } else {
+            $('.js-card-fields').fadeOut(fadeDuration, function() {
+              $('.js-po-fields').fadeIn(fadeDuration)
+            })
+          }
+        }
+    </script>
+</body>
+
+</html>

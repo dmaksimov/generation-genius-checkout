@@ -1,0 +1,27 @@
+.order-summary {
+  background-color: #f0f2f3;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.order-summary__heading {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: $gray;
+  font-weight: normal;
+  text-align: center;
+}
+.order-summary__plan {
+  color: $black;
+  font-size: 1rem;
+}
+.order-summary__total {
+  display: flex;
+  font-size: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+.order-summary__description {
+  font-size: 0.8125rem;
+}

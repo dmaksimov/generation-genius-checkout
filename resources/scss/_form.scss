@@ -1,0 +1,83 @@
+select, input[type=text], input[type=email], input[type=password] {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #c9d2d8;
+  border-radius: 3px;
+}
+
+select {
+  padding: 0.83rem 0.4rem;
+  color: $gray;
+}
+
+select option {
+  color: $gray;
+}
+
+.form-group {
+  margin-bottom: 0.75rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.form-row > * {
+  flex: 1;
+}
+
+.radio input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+.radio input[type="radio"] + label {
+  display: block;
+  background-color: #f8f8f8;
+  padding: 1rem;
+  border: 2px solid #f8f8f8;
+  border-radius: 3px;
+  font-weight: 700;
+  color: $black;
+  cursor: pointer;
+}
+.radio input[type="radio"] + label:before {
+  font-family: 'Font Awesome 5 Pro';
+  content: '\f111';
+  color: #cccccc;
+  font-weight: 400;
+  margin-right: 0.35rem;
+  font-size: 1.25rem;
+  vertical-align: middle;
+}
+.radio input[type="radio"]:checked + label {
+  border: 2px solid $orange;
+}
+.radio input[type="radio"]:checked + label:before {
+  content: '\f058';
+  color: $orange;
+  font-weight: 700;
+}
+
+.checkbox input[type="checkbox"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+.checkbox input[type="checkbox"] + label {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+.checkbox input[type="checkbox"] + label:before {
+  font-family: 'Font Awesome 5 Pro';
+  content: '\f0c8';
+  font-weight: 400;
+  color: $orange;
+  font-size: 1.25rem;
+}
+.checkbox input[type="checkbox"]:checked + label:before {
+  content: '\f14a';
+  font-weight: bold;
+}

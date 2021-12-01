@@ -1,0 +1,28 @@
+.orange {
+  color: $orange;
+}
+.black {
+  color: $black;
+}
+.bold {
+  font-weight: bold;
+}
+.hide-initially {
+  display: none;
+}
+.mt-0 {
+  margin-top: 0;
+}
+.d-none {
+  display: none;
+}
+.d-lg-none {
+  @media (min-width: $screen-lg-min) {
+    display: none;
+  }
+}
+.d-lg-block {
+  @media (min-width: $screen-lg-min) {
+    display: block;
+  }
+}
